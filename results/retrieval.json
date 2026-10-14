@@ -1,0 +1,429 @@
+{
+  "note": "10 unique synthetic queries repeated 30 times. Tiny local in-memory corpus, no network, no embeddings unless a local encoder is configured. No claims about enterprise-scale hybrid search.",
+  "results": [
+    {
+      "mode": "bm25",
+      "cached": false,
+      "backend": "bm25",
+      "top1_accuracy": 0.8,
+      "queries": [
+        {
+          "query": "tarifa anual muito cara",
+          "expected": "KB-001",
+          "top1": "KB-001",
+          "top3": [
+            "KB-001",
+            "KB-008"
+          ]
+        },
+        {
+          "query": "vantagens do cartão",
+          "expected": "KB-002",
+          "top1": "KB-002",
+          "top3": [
+            "KB-002",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "quero encerrar cartão",
+          "expected": "KB-003",
+          "top1": "KB-003",
+          "top3": [
+            "KB-003",
+            "KB-002",
+            "KB-001"
+          ]
+        },
+        {
+          "query": "comprovante de transferência Pix",
+          "expected": "KB-004",
+          "top1": "KB-004",
+          "top3": [
+            "KB-004"
+          ]
+        },
+        {
+          "query": "compra desconhecida golpe",
+          "expected": "KB-005",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-004"
+          ]
+        },
+        {
+          "query": "estou decepcionado",
+          "expected": "KB-006",
+          "top1": "KB-006",
+          "top3": [
+            "KB-006"
+          ]
+        },
+        {
+          "query": "poupar para uma emergência",
+          "expected": "KB-007",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007"
+          ]
+        },
+        {
+          "query": "cesta do pacote da conta",
+          "expected": "KB-008",
+          "top1": "KB-008",
+          "top3": [
+            "KB-008",
+            "KB-004",
+            "KB-007"
+          ]
+        },
+        {
+          "query": "esse plástico pesa no bolso",
+          "expected": "KB-001",
+          "top1": null,
+          "top3": []
+        },
+        {
+          "query": "onde consulto o recibo do dinheiro enviado",
+          "expected": "KB-004",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007"
+          ]
+        }
+      ],
+      "latency_ms": {
+        "p50": 0.021472999947036442,
+        "p95": 0.02839704985717617,
+        "p99": 0.06037558998059457
+      }
+    },
+    {
+      "mode": "bm25",
+      "cached": true,
+      "backend": "bm25",
+      "top1_accuracy": 0.8,
+      "queries": [
+        {
+          "query": "tarifa anual muito cara",
+          "expected": "KB-001",
+          "top1": "KB-001",
+          "top3": [
+            "KB-001",
+            "KB-008"
+          ]
+        },
+        {
+          "query": "vantagens do cartão",
+          "expected": "KB-002",
+          "top1": "KB-002",
+          "top3": [
+            "KB-002",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "quero encerrar cartão",
+          "expected": "KB-003",
+          "top1": "KB-003",
+          "top3": [
+            "KB-003",
+            "KB-002",
+            "KB-001"
+          ]
+        },
+        {
+          "query": "comprovante de transferência Pix",
+          "expected": "KB-004",
+          "top1": "KB-004",
+          "top3": [
+            "KB-004"
+          ]
+        },
+        {
+          "query": "compra desconhecida golpe",
+          "expected": "KB-005",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-004"
+          ]
+        },
+        {
+          "query": "estou decepcionado",
+          "expected": "KB-006",
+          "top1": "KB-006",
+          "top3": [
+            "KB-006"
+          ]
+        },
+        {
+          "query": "poupar para uma emergência",
+          "expected": "KB-007",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007"
+          ]
+        },
+        {
+          "query": "cesta do pacote da conta",
+          "expected": "KB-008",
+          "top1": "KB-008",
+          "top3": [
+            "KB-008",
+            "KB-004",
+            "KB-007"
+          ]
+        },
+        {
+          "query": "esse plástico pesa no bolso",
+          "expected": "KB-001",
+          "top1": null,
+          "top3": []
+        },
+        {
+          "query": "onde consulto o recibo do dinheiro enviado",
+          "expected": "KB-004",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007"
+          ]
+        }
+      ],
+      "latency_ms": {
+        "p50": 0.0025585000003047753,
+        "p95": 0.0034327999060224114,
+        "p99": 0.027986360075828998
+      }
+    },
+    {
+      "mode": "hybrid",
+      "cached": false,
+      "backend": "bm25+char_tfidf_rrf",
+      "top1_accuracy": 0.8,
+      "queries": [
+        {
+          "query": "tarifa anual muito cara",
+          "expected": "KB-001",
+          "top1": "KB-001",
+          "top3": [
+            "KB-001",
+            "KB-008",
+            "KB-006"
+          ]
+        },
+        {
+          "query": "vantagens do cartão",
+          "expected": "KB-002",
+          "top1": "KB-002",
+          "top3": [
+            "KB-002",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "quero encerrar cartão",
+          "expected": "KB-003",
+          "top1": "KB-003",
+          "top3": [
+            "KB-003",
+            "KB-001",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "comprovante de transferência Pix",
+          "expected": "KB-004",
+          "top1": "KB-004",
+          "top3": [
+            "KB-004",
+            "KB-005",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "compra desconhecida golpe",
+          "expected": "KB-005",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-004",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "estou decepcionado",
+          "expected": "KB-006",
+          "top1": "KB-006",
+          "top3": [
+            "KB-006",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "poupar para uma emergência",
+          "expected": "KB-007",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007",
+            "KB-004",
+            "KB-006"
+          ]
+        },
+        {
+          "query": "cesta do pacote da conta",
+          "expected": "KB-008",
+          "top1": "KB-008",
+          "top3": [
+            "KB-008",
+            "KB-004",
+            "KB-007"
+          ]
+        },
+        {
+          "query": "esse plástico pesa no bolso",
+          "expected": "KB-001",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-006",
+            "KB-004"
+          ]
+        },
+        {
+          "query": "onde consulto o recibo do dinheiro enviado",
+          "expected": "KB-004",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007",
+            "KB-008",
+            "KB-001"
+          ]
+        }
+      ],
+      "latency_ms": {
+        "p50": 0.4268324998975004,
+        "p95": 0.7075080000504388,
+        "p99": 0.9402905700585492
+      }
+    },
+    {
+      "mode": "hybrid",
+      "cached": true,
+      "backend": "bm25+char_tfidf_rrf",
+      "top1_accuracy": 0.8,
+      "queries": [
+        {
+          "query": "tarifa anual muito cara",
+          "expected": "KB-001",
+          "top1": "KB-001",
+          "top3": [
+            "KB-001",
+            "KB-008",
+            "KB-006"
+          ]
+        },
+        {
+          "query": "vantagens do cartão",
+          "expected": "KB-002",
+          "top1": "KB-002",
+          "top3": [
+            "KB-002",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "quero encerrar cartão",
+          "expected": "KB-003",
+          "top1": "KB-003",
+          "top3": [
+            "KB-003",
+            "KB-001",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "comprovante de transferência Pix",
+          "expected": "KB-004",
+          "top1": "KB-004",
+          "top3": [
+            "KB-004",
+            "KB-005",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "compra desconhecida golpe",
+          "expected": "KB-005",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-004",
+            "KB-002"
+          ]
+        },
+        {
+          "query": "estou decepcionado",
+          "expected": "KB-006",
+          "top1": "KB-006",
+          "top3": [
+            "KB-006",
+            "KB-001",
+            "KB-003"
+          ]
+        },
+        {
+          "query": "poupar para uma emergência",
+          "expected": "KB-007",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007",
+            "KB-004",
+            "KB-006"
+          ]
+        },
+        {
+          "query": "cesta do pacote da conta",
+          "expected": "KB-008",
+          "top1": "KB-008",
+          "top3": [
+            "KB-008",
+            "KB-004",
+            "KB-007"
+          ]
+        },
+        {
+          "query": "esse plástico pesa no bolso",
+          "expected": "KB-001",
+          "top1": "KB-005",
+          "top3": [
+            "KB-005",
+            "KB-006",
+            "KB-004"
+          ]
+        },
+        {
+          "query": "onde consulto o recibo do dinheiro enviado",
+          "expected": "KB-004",
+          "top1": "KB-007",
+          "top3": [
+            "KB-007",
+            "KB-008",
+            "KB-001"
+          ]
+        }
+      ],
+      "latency_ms": {
+        "p50": 0.002588000029390969,
+        "p95": 0.0034884499768850228,
+        "p99": 0.5932177901127026
+      }
+    }
+  ]
+}

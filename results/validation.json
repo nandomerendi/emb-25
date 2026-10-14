@@ -1,0 +1,11 @@
+{
+  "python_tests_passed": 22,
+  "frontend_transport_tests_passed": 2,
+  "typescript_check": "passed",
+  "vite_build": "passed",
+  "openai_live_inference": "not_run",
+  "browser_visual_qa": "not_run",
+  "docker_build": "not_run",
+  "agentcore_deployment": "not_run",
+  "synthetic_only": true
+}

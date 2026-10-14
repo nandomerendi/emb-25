@@ -1,0 +1,477 @@
+{
+  "note": "35 synthetic training examples; 21 separate evaluation phrases; 20 timing repetitions. Only subject classification, not sentiment or complete ontology. Thresholds heuristic, no calibration set. No held-out production data; not evidence to choose a production detector.",
+  "unexecuted": [
+    "semantic embeddings: no local encoder configured",
+    "small language model: no credentials/model supplied"
+  ],
+  "results": [
+    {
+      "detector": "regex",
+      "macro_f1": 0.5218487394957984,
+      "abstention_rate": 0.6666666666666666,
+      "latency_ms": {
+        "p50": 0.04797300005066063,
+        "p95": 0.09663829988539874,
+        "p99": 0.2249309099829589
+      },
+      "predictions": [
+        {
+          "text": "a anuidade veio cara",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "a tarifa anual não compensa",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "pago todo mês para manter esse plástico",
+          "gold": "anuidade",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quais as vantagens do Aurora",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "o que está incluído no cartão",
+          "gold": "beneficios",
+          "prediction": "unknown"
+        },
+        {
+          "text": "tem cartão virtual",
+          "gold": "beneficios",
+          "prediction": "unknown"
+        },
+        {
+          "text": "cadê o comprovante Pix",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "como vejo o recibo do dinheiro enviado",
+          "gold": "pix",
+          "prediction": "unknown"
+        },
+        {
+          "text": "preciso provar aquela transferência",
+          "gold": "pix",
+          "prediction": "unknown"
+        },
+        {
+          "text": "não reconheço a compra",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "usaram meu cartão sem eu deixar",
+          "gold": "seguranca",
+          "prediction": "unknown"
+        },
+        {
+          "text": "acho que roubaram minha conta",
+          "gold": "seguranca",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero guardar dinheiro",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "como juntar um valor para uma emergência",
+          "gold": "reserva",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero formar meu pé de meia",
+          "gold": "reserva",
+          "prediction": "unknown"
+        },
+        {
+          "text": "estou insatisfeito",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "mais uma vez ninguém me ajuda",
+          "gold": "insatisfacao",
+          "prediction": "unknown"
+        },
+        {
+          "text": "excelente serviço, só que não",
+          "gold": "insatisfacao",
+          "prediction": "unknown"
+        },
+        {
+          "text": "boa tarde",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "obrigado",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero saber o horário de abertura",
+          "gold": "unknown",
+          "prediction": "unknown"
+        }
+      ]
+    },
+    {
+      "detector": "bm25_examples",
+      "macro_f1": 0.8068027210884354,
+      "abstention_rate": 0.14285714285714285,
+      "latency_ms": {
+        "p50": 0.1271359999464039,
+        "p95": 0.2784436499837283,
+        "p99": 0.5429976000073112
+      },
+      "predictions": [
+        {
+          "text": "a anuidade veio cara",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "a tarifa anual não compensa",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "pago todo mês para manter esse plástico",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "quais as vantagens do Aurora",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "o que está incluído no cartão",
+          "gold": "beneficios",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "tem cartão virtual",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "cadê o comprovante Pix",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "como vejo o recibo do dinheiro enviado",
+          "gold": "pix",
+          "prediction": "reserva"
+        },
+        {
+          "text": "preciso provar aquela transferência",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "não reconheço a compra",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "usaram meu cartão sem eu deixar",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "acho que roubaram minha conta",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "quero guardar dinheiro",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "como juntar um valor para uma emergência",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "quero formar meu pé de meia",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "estou insatisfeito",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "mais uma vez ninguém me ajuda",
+          "gold": "insatisfacao",
+          "prediction": "unknown"
+        },
+        {
+          "text": "excelente serviço, só que não",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "boa tarde",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "obrigado",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero saber o horário de abertura",
+          "gold": "unknown",
+          "prediction": "beneficios"
+        }
+      ]
+    },
+    {
+      "detector": "char_tfidf_examples",
+      "macro_f1": 0.8544217687074829,
+      "abstention_rate": 0.09523809523809523,
+      "latency_ms": {
+        "p50": 0.4459174999738025,
+        "p95": 0.9530147000418763,
+        "p99": 1.2779541399595475
+      },
+      "predictions": [
+        {
+          "text": "a anuidade veio cara",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "a tarifa anual não compensa",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "pago todo mês para manter esse plástico",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "quais as vantagens do Aurora",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "o que está incluído no cartão",
+          "gold": "beneficios",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "tem cartão virtual",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "cadê o comprovante Pix",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "como vejo o recibo do dinheiro enviado",
+          "gold": "pix",
+          "prediction": "reserva"
+        },
+        {
+          "text": "preciso provar aquela transferência",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "não reconheço a compra",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "usaram meu cartão sem eu deixar",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "acho que roubaram minha conta",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "quero guardar dinheiro",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "como juntar um valor para uma emergência",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "quero formar meu pé de meia",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "estou insatisfeito",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "mais uma vez ninguém me ajuda",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "excelente serviço, só que não",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "boa tarde",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "obrigado",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero saber o horário de abertura",
+          "gold": "unknown",
+          "prediction": "beneficios"
+        }
+      ]
+    },
+    {
+      "detector": "linear_classifier",
+      "macro_f1": 0.7303030303030302,
+      "abstention_rate": 0.38095238095238093,
+      "latency_ms": {
+        "p50": 0.3932665000547786,
+        "p95": 0.9342703998868269,
+        "p99": 1.4898720499218145
+      },
+      "predictions": [
+        {
+          "text": "a anuidade veio cara",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "a tarifa anual não compensa",
+          "gold": "anuidade",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "pago todo mês para manter esse plástico",
+          "gold": "anuidade",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quais as vantagens do Aurora",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "o que está incluído no cartão",
+          "gold": "beneficios",
+          "prediction": "anuidade"
+        },
+        {
+          "text": "tem cartão virtual",
+          "gold": "beneficios",
+          "prediction": "beneficios"
+        },
+        {
+          "text": "cadê o comprovante Pix",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "como vejo o recibo do dinheiro enviado",
+          "gold": "pix",
+          "prediction": "unknown"
+        },
+        {
+          "text": "preciso provar aquela transferência",
+          "gold": "pix",
+          "prediction": "pix"
+        },
+        {
+          "text": "não reconheço a compra",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "usaram meu cartão sem eu deixar",
+          "gold": "seguranca",
+          "prediction": "unknown"
+        },
+        {
+          "text": "acho que roubaram minha conta",
+          "gold": "seguranca",
+          "prediction": "seguranca"
+        },
+        {
+          "text": "quero guardar dinheiro",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "como juntar um valor para uma emergência",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "quero formar meu pé de meia",
+          "gold": "reserva",
+          "prediction": "reserva"
+        },
+        {
+          "text": "estou insatisfeito",
+          "gold": "insatisfacao",
+          "prediction": "insatisfacao"
+        },
+        {
+          "text": "mais uma vez ninguém me ajuda",
+          "gold": "insatisfacao",
+          "prediction": "unknown"
+        },
+        {
+          "text": "excelente serviço, só que não",
+          "gold": "insatisfacao",
+          "prediction": "unknown"
+        },
+        {
+          "text": "boa tarde",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "obrigado",
+          "gold": "unknown",
+          "prediction": "unknown"
+        },
+        {
+          "text": "quero saber o horário de abertura",
+          "gold": "unknown",
+          "prediction": "unknown"
+        }
+      ]
+    }
+  ]
+}

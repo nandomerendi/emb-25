@@ -1,0 +1,14 @@
+{
+ "version":"1.0.0",
+ "description":"Vocabulário mínimo sintético; score heurístico não é probabilidade calibrada.",
+ "dimensions":{
+  "product":{"cartao":["\\bcartao\\b","\\baurora\\b"],"conta":["\\bconta\\b","\\bpix\\b","\\bhorizonte\\b"]},
+  "subject":{"anuidade":["\\banuidade\\b","tarifa anual"],"beneficios":["\\bbeneficios?\\b","\\bvantagens?\\b","\\bpontos\\b"],"pix":["\\bpix\\b","\\bcomprovante\\b"],"seguranca":["nao reconheco","\\bfraude\\b","\\bgolpe\\b","compra desconhecida"],"reserva":["guardar dinheiro","\\bpoupar\\b","reserva de emergencia"],"tarifa":["tarifa da conta","pacote da conta","\\bcesta\\b"]},
+  "objection":{"preco":["\\bcar[oa]s?\\b","\\bpreco\\b","\\bcusto\\b","\\babsurdo\\b"]},
+  "sentiment":{"negativo":["\\birritad[oa]\\b","\\binsatisfeit[oa]\\b","\\bpessim[oa]\\b","\\babsurdo\\b","\\bdecepcionad[oa]\\b","nao aguento"],"positivo":["\\botimo\\b","\\bexcelente\\b","muito obrigado","ajudou bastante"]}
+ },
+ "intents":["duvida","avaliacao","cancelamento","interesse","reclamacao","indefinida"],
+ "journey":["investigacao","consideracao_permanencia","orientacao","resolucao"],
+ "policy":{"min_confidence":0.7,"cooldown_seconds":8,"dedup_seconds":90,"expiry_seconds":45,"operator_handling_seconds":25,"max_active_cards":2},
+ "non_goals":["Diagnosticar emoção","Inferir perfil de risco financeiro","Determinar elegibilidade do cliente"]
+}
